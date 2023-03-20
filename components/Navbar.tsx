@@ -12,7 +12,7 @@ function Navbar() {
   }, 700);
   return (
     <nav
-      className={` z-10 fixed flex flex-col justify-center items-center bg-primaryColor dark:bg-backGroundDark dark:bg-opacity-80  bg-opacity-80 rounded-b-lg w-5/6 duration-500 drop-shadow-lg backdrop-blur-sm
+      className={` z-50 fixed flex flex-col justify-center items-center bg-primaryColor dark:bg-backGroundDark dark:bg-opacity-80  bg-opacity-80 rounded-b-lg w-5/6 duration-500 drop-shadow-lg backdrop-blur-sm
     right-0 left-0 mx-auto  ${initialPosition} ${
         fullNav ? "translate-y-36" : ""
       }`}
