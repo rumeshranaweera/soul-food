@@ -4,7 +4,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
-function Navbar() {
+function Navbar({ setIsOpenOrderList }: any) {
   const [fullNav, setFullNav] = useState(false);
   const [initialPosition, setInitialPosition] = useState("-top-60");
   const cahngeColor = setTimeout(() => {
@@ -12,6 +12,7 @@ function Navbar() {
   }, 700);
   return (
     <nav
+      onClick={() => setIsOpenOrderList(false)}
       className={` z-50 fixed flex flex-col justify-center items-center bg-primaryColor dark:bg-backGroundDark dark:bg-opacity-80  bg-opacity-80 rounded-b-lg w-5/6 duration-500 drop-shadow-lg backdrop-blur-sm
     right-0 left-0 mx-auto  ${initialPosition} ${
         fullNav ? "translate-y-36" : ""

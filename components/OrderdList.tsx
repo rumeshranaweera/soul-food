@@ -16,7 +16,7 @@ export default function OrderdList({
         >
           x
         </div>
-        <h3 className="text-center text-3xl font-bold ">orderd list</h3>
+        <h3 className="text-center text-3xl font-bold uppercase">order list</h3>
         {orderList.length > 0 ? (
           <ol className="">
             {orderList?.map((item: string, inx: number) => {
