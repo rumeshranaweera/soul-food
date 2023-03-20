@@ -1,26 +1,126 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+@layer base {
   body {
-    color: white;
-    background: black;
+    @apply font-Poppins mt-24 flex items-center justify-center bg-backGroundLight text-backGroundDark dark:bg-backGroundDark dark:text-primaryColor antialiased scroll-smooth;
   }
+  h2 {
+    @apply text-xl;
+  }
+  /* ... */
+}
+
+@layer components {
+  .link {
+    @apply bg-transparent h-full rounded border border-backGroundDark hover:border-backGroundDark dark:hover:border-primaryColor my-2 px-2 py-1;
+  }
+
+  .about-links {
+    @apply my-2;
+  }
+  .about-clicks {
+    @apply bg-backGroundDark px-1 rounded-md bg-opacity-5 dark:bg-primaryColor  dark:bg-opacity-10;
+  }
+}
+@layer utilities {
+  .animate-delay-2s {
+    animation-delay: 2s;
+  }
+  .animate-delay-4s {
+    animation-delay: 4s;
+  }
+  .animate-delay-8s {
+    animation-delay: 8s;
+  }
+}
+
+.shadow {
+  box-shadow: inset 8px -20px 20px 20px #e6ffe7;
+}
+/* slider */
+
+.container {
+  display: flex;
+  /* height: 50vh; */
+}
+
+.slideshow {
+  margin: auto;
+  width: 60vw;
+  aspect-ratio: calc(16 / 9);
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+}
+@media screen and (max-width: 530px) {
+  .slideshow {
+    width: 90vw;
+  }
+}
+
+.container button {
+  padding: 16px;
+  font-size: 18px;
+  width: 64px;
+  aspect-ratio: 1;
+  border-radius: 32px;
+  background-color: #0f0c29;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  color: white;
+}
+
+.container button:hover {
+  background-color: #24243e;
+}
+
+.prevButton {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+}
+
+.nextButton {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+}
+
+.slides {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* review slide  */
+article {
+  opacity: 0.5;
+}
+article.activeSlide {
+  opacity: 1;
+  transform: translateX(0);
+  z-index: 2;
+}
+article.lastSlide {
+  transform: translateX(-100%);
+  scale: 0.8;
+}
+article.nextSlide {
+  transform: translateX(100%);
+  scale: 0.8;
+}
+article.hiddenSlide {
+  opacity: 0;
+  transform: translateX(100%);
+  scale: 0.8;
 }
