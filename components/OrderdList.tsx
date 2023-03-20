@@ -9,7 +9,7 @@ export default function OrderdList({
   const { orderList, setOrderList }: any = useGlobalContext();
   if (isOpenOrderList) {
     return (
-      <div className="fixed right-10 w-2/3 h-2/3 mx-auto max-w-xs left-10 top-10 place-content-center mt-24 p-2  bg-primaryColor bg-opacity-70 rounded-md backdrop-blur-sm dark:text-backGroundDark">
+      <div className="fixed z-40 right-10 w-2/3 h-2/3 mx-auto max-w-xs left-10 top-10 place-content-center mt-24 p-2  bg-primaryColor bg-opacity-70 rounded-md backdrop-blur-sm dark:text-backGroundDark">
         <div
           className="absolute top-2 right-2 bg-backGroundDark rounded-md bg-opacity-10 px-2 cursor-pointer"
           onClick={() => setIsOpenOrderList(false)}
