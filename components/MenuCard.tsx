@@ -49,9 +49,7 @@ function MenuCard({ item }: any): any {
           </motion.div>
           <motion.div className="ml-2 flex-none ">
             <div className="flex justify-between items-center pt-1">
-              <h2 className="text-lg  uppercase sm:mb-1">
-                {title} flksajdf;kjsf
-              </h2>
+              <h2 className="text-lg  uppercase sm:mb-1">{title}</h2>
               <h2 className="mr-2 text-sm bg-backGroundDark dark:bg-primaryColor dark:bg-opacity-10 bg-opacity-10 px-2 py-1 rounded-md text-center sm:mb-1">
                 lkr.{price}
               </h2>
