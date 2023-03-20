@@ -20,7 +20,7 @@ export default function App({ Component, pageProps }: AppProps) {
             content="Vegetarian and vegan food – Sri Lankan, Western, fusion"
           />
 
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="/favicon.png" />
         </Head>
         <div className="fixed -z-50 left-0 top-3 w-72 h-72 bg-backGroundDark  opacity-20 rounded-full mix-blend-multiply filter blur-3xl animate-blob animate-delay-2s"></div>
         <div className="fixed -z-50 bottom-7 left-10 w-72 h-72 bg-lime-200 rounded-full mix-blend-multiply filter blur-3xl animate-blob animate-delay-4s"></div>
