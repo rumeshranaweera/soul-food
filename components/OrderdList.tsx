@@ -16,14 +16,14 @@ export default function OrderdList({
         >
           x
         </div>
-        <h3 className="text-center text-3xl font-bold ">orderd list </h3>
+        <h3 className="text-center text-3xl font-bold ">orderd list</h3>
         {orderList.length > 0 ? (
           <ol className="">
             {orderList?.map((item: string, inx: number) => {
               return (
                 <li
                   key={item}
-                  className={`flex justify-between mx-1 pl-2 leading-7 duration-500 ${
+                  className={`flex justify-between mx-1 font-bold capitalize pl-2 leading-7 duration-500 mt-1 ${
                     inx % 2 === 0
                       ? "bg-backGroundDark bg-opacity-10 rounded-md"
                       : null
