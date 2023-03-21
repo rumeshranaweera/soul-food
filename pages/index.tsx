@@ -212,9 +212,11 @@ function ImageSlider() {
   );
 }
 export default function Home({ setIsOpenOrderList }: any) {
-  const [index, setIndex] = useState(
-    Math.floor(Math.random() * reviews.length - 2)
-  );
+  const [index, setIndex] = useState(0);
+  useEffect(() => {
+    setIndex(Math.floor(Math.random() * reviews.length - 2));
+  }, []);
+
   useEffect(() => {
     const lastIndex = reviews.length - 1;
     if (index < 0) {
@@ -262,8 +264,8 @@ export default function Home({ setIsOpenOrderList }: any) {
             })}
           </div>
         </div>
-        <div className="reviews my-2">
-          <div className="flex justify-between">
+        <div className="reviews my-3">
+          <div className="flex justify-between items-center">
             <h2 className="text-3xl font-bold">Reviews</h2>
             <a
               href="https://www.tripadvisor.com/UserReviewEdit-g304138-d19839180-Soul_Food-Kandy_Kandy_District_Central_Province.html"

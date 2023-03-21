@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { useGlobalContext } from "../pages/context";
+import { CheckIcon } from "@heroicons/react/24/solid";
 
 // export interface menuItems {
 //   id: number;
@@ -30,6 +31,7 @@ function MenuCard({ item }: any): any {
             y: 0,
             opacity: 1,
           }}
+          viewport={{ once: true }}
           transition={{ duration: 0.7 }}
           className={`open-card bg-white dark:bg-backGroundDark bg-opacity-70 drop-shadow-3xl dark:border-primaryColor dark:border-2 dark:border-opacity-30 dark:drop-shadow-none rounded-md overflow-hidden flex flex-col   p-1  -scale-x-0 h-72 max-w-[264px]`}
         >
@@ -68,7 +70,7 @@ function MenuCard({ item }: any): any {
             className="absolute bottom-0 right-0 cursor-pointer text-lg bg-backGroundDark dark:text-primaryColor dark:bg-primaryColor dark:bg-opacity-10 bg-opacity-20 px-2 m-1 rounded-md"
             onClick={addToList}
           >
-            {orderList.includes(title) ? "✔" : "+"}
+            {orderList.includes(title) ? "🗸" : "+"}
           </div>
         </motion.article>
       </div>

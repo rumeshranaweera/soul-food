@@ -7,7 +7,6 @@ function Footer() {
         &copy; soul food {new Date().getFullYear().toString()}
       </p>
       <p className="text-[10px]">
-        everything by{" "}
         <a
           href="https://www.instagram.com/lx_l_lx/"
           className="cursor-pointer"

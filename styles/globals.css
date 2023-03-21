@@ -15,7 +15,7 @@
 
 @layer components {
   .link {
-    @apply bg-transparent h-full rounded border border-backGroundDark hover:border-backGroundDark dark:hover:border-primaryColor my-2 px-2 py-1;
+    @apply bg-transparent h-full rounded border text-center border-backGroundDark dark:border-primaryColor dark:border-opacity-20 hover:border-backGroundDark dark:hover:border-primaryColor my-2 px-2 py-1;
   }
 
   .about-links {

@@ -36,7 +36,7 @@ export default function App({ Component, pageProps }: AppProps) {
           setIsOpenOrderList={setIsOpenOrderList}
         />
         <div
-          className="bg-backGroundDark bg-opacity-80 dark:bg-primaryColor p-1 rounded-md fixed bottom-2 right-2 cursor-pointer"
+          className="bg-backGroundDark bg-opacity-80 dark:bg-primaryColor p-1 text-2xl rounded-md fixed bottom-3 right-3 cursor-pointer"
           onClick={() => setIsOpenOrderList(true)}
         >
           🍜
