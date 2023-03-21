@@ -5,7 +5,7 @@ import { useGlobalContext } from "../pages/context";
 export default function OrderdList({
   isOpenOrderList,
   setIsOpenOrderList,
-}: any) {
+}: any): any {
   const { orderList, setOrderList }: any = useGlobalContext();
   if (isOpenOrderList) {
     return (
