@@ -1,9 +1,18 @@
 import Head from "next/head";
+import { type } from "os";
 import React, { useState } from "react";
 import Categories from "../components/Categories";
 import MenuCard from "../components/MenuCard";
 
-export const itemsList = [
+type item = {
+  imageUrl: string;
+  title: string;
+  ingredients: string[];
+  price: number;
+  category: string;
+};
+
+export const itemsList: item[] = [
   {
     imageUrl:
       "https://media-cdn.tripadvisor.com/media/photo-s/1a/8c/d3/a2/rice-noodle-bowl-and.jpg",
