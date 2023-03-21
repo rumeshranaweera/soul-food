@@ -318,19 +318,19 @@ export default function Home({ setIsOpenOrderList }: any) {
                 </article>
               );
             })}
-            <div
-              className=" absolute z-10 top-0 bottom-0 left-1 flex items-center"
-              onClick={() => setIndex(index - 1)}
-            >
-              <button className="text-3xl bg-primaryColor bg-opacity-60 dark:text-backGroundDark rounded-full px-2">
+            <div className=" absolute z-10 top-0 bottom-0 left-1 flex items-center">
+              <button
+                className="text-3xl bg-primaryColor bg-opacity-60 dark:text-backGroundDark rounded-full px-2"
+                onClick={() => setIndex(index - 1)}
+              >
                 {"<"}
               </button>
             </div>
-            <div
-              className="absolute z-10 top-0 bottom-0 right-1 flex items-center "
-              onClick={() => setIndex(index + 1)}
-            >
-              <button className="text-3xl bg-primaryColor bg-opacity-60 dark:text-backGroundDark rounded-full px-2">
+            <div className="absolute z-10 top-0 bottom-0 right-1 flex items-center ">
+              <button
+                className="text-3xl bg-primaryColor bg-opacity-60 dark:text-backGroundDark rounded-full px-2"
+                onClick={() => setIndex(index + 1)}
+              >
                 {">"}
               </button>
             </div>
