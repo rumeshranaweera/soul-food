@@ -253,7 +253,7 @@ export default function Home({ setIsOpenOrderList }: any) {
         <ImageSlider />
         <div className="mt-2">
           <div className="flex justify-between my-2">
-            <h2 className="text-3xl font-bold">Favorites</h2>
+            <h2 className="text-3xl font-bold">Favourites</h2>
             <Link href="/menu" className="text-xl font-bold">
               Menu <ChevronDownIcon className="inline h-6 w-6 -rotate-90" />
             </Link>
