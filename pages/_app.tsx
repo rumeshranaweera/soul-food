@@ -14,7 +14,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <Appcontext>
       <>
         <Head>
-          <title>soul food</title>
+          <title>Soul Food</title>
           <meta
             name="description"
             content="Vegetarian and vegan food – Sri Lankan, Western, fusion"
@@ -37,7 +37,7 @@ export default function App({ Component, pageProps }: AppProps) {
         />
         <div
           className="bg-backGroundDark bg-opacity-80 dark:bg-primaryColor p-1 text-2xl rounded-md fixed z-30 bottom-3 right-3 cursor-pointer"
-          onClick={() => setIsOpenOrderList(true)}
+          onClick={() => setIsOpenOrderList(!isOpenOrderList)}
         >
           🍜
         </div>

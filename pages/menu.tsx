@@ -116,7 +116,7 @@ function menu({ setIsOpenOrderList }: any) {
   return (
     <>
       <Head>
-        <title>menu</title>
+        <title>Menu</title>
       </Head>
       <div
         className="
