@@ -70,7 +70,7 @@ function MenuCard({ item }: any): any {
             className="absolute bottom-0 right-0 cursor-pointer text-lg bg-backGroundDark dark:text-primaryColor dark:bg-primaryColor dark:bg-opacity-10 bg-opacity-20 px-2 m-1 rounded-md"
             onClick={addToList}
           >
-            {orderList.includes(title) ? "🗸" : "+"}
+            {orderList.includes(title) ? "✓" : "+"}
           </div>
         </motion.article>
       </div>
