@@ -152,14 +152,7 @@ function about({ setIsOpenOrderList }: any) {
             </div>
           </div>
         </div>
-        <div className="shadow fixed -z-10 opacity-5 top-0 rounded-md min-h-screen min-w-full">
-          <Image
-            className=""
-            src={"/soul-food-front.jpeg"}
-            fill
-            alt={"cafe pic"}
-          />
-        </div>
+        <div className="shadow fixed -z-10 opacity-5 top-0 rounded-md min-h-screen min-w-full"></div>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.5446972930604!2d80.63386371477506!3d7.292528194736579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae36721cdbf3209%3A0x1575ab994a62ba51!2sSoul%20Food!5e0!3m2!1sen!2snl!4v1679292755872!5m2!1sen!2snl"
           className="w-full rounded-md block"
