@@ -16,7 +16,7 @@ function about({ setIsOpenOrderList }: any) {
       >
         <div
           className="flex flex-col justify-start w-5/6
-        right-0 left-0 mx-auto max-w-3xl"
+        right-0 left-0 mx-auto max-w-3xl md:min-w-[1024px] dark:shadow-none"
         >
           <h1 className="text-5xl font-bold my-6">About</h1>
           <motion.article
@@ -26,7 +26,7 @@ function about({ setIsOpenOrderList }: any) {
             transition={{ duration: 1 }}
             className="flex flex-col justify-center items-center"
           >
-            <div className="rounded-lg  overflow-hidden drop-shadow-2xl relative bg-blue-200">
+            <div className="rounded-lg  overflow-hidden drop-shadow-2xl relative">
               <Image
                 src={"/chamara-cristine.jpg"}
                 width="200"
@@ -94,13 +94,6 @@ function about({ setIsOpenOrderList }: any) {
                 className="mx-2"
                 target={"_blank"}
               >
-                {/* <Image
-                  src={"/facebook-svgrepo-com.svg"}
-                  width="30"
-                  height="30"
-                  className=""
-                  alt={"soul food logo"}
-                /> */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -116,12 +109,6 @@ function about({ setIsOpenOrderList }: any) {
                 className="mx-2"
                 target={"_blank"}
               >
-                {/* <Image
-                  src={"/instagram-svgrepo-com.svg"}
-                  width="40"
-                  height="40"
-                  alt={"soul food logo"}
-                /> */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -133,12 +120,6 @@ function about({ setIsOpenOrderList }: any) {
                 </svg>
               </a>
               <a href="mailto:soulfoodkandy@gmail.com" className="mx-2">
-                {/* <Image
-                  src={"/email-svgrepo-com.svg"}
-                  width="40"
-                  height="70"
-                  alt={"soul food logo"}
-                /> */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="28"

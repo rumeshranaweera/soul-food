@@ -6,7 +6,13 @@ import { ChevronDownIcon, ShoppingCartIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
 import { itemsList } from "./menu";
 import MenuCard from "../components/MenuCard";
-import { useGlobalContext } from "./context";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation, Autoplay } from "swiper";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 const reviews = [
   {
@@ -157,56 +163,81 @@ function ImageSlider() {
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(0);
 
-  function nextStep() {
-    setDirection(1);
-    if (index === images.length - 1) {
-      setIndex(0);
-      return;
-    }
-    setIndex(index + 1);
-  }
-
-  function prevStep() {
-    setDirection(-1);
-    if (index === 0) {
-      setIndex(images.length - 1);
-      return;
-    }
-    setIndex(index - 1);
-  }
-  useEffect(() => {
-    const autoSlide = setInterval(() => {
-      setDirection(1);
-      if (index === images.length - 1) {
-        setIndex(0);
-        return;
-      }
-      setIndex(index + 1);
-    }, 3000);
-    return () => clearInterval(autoSlide);
-  }, [index, direction]);
+  //   function nextStep() {
+  //     setDirection(1);
+  //     if (index === images.length - 1) {
+  //       setIndex(0);
+  //       return;
+  //     }
+  //     setIndex(index + 1);
+  //   }
+  //
+  //   function prevStep() {
+  //     setDirection(-1);
+  //     if (index === 0) {
+  //       setIndex(images.length - 1);
+  //       return;
+  //     }
+  //     setIndex(index - 1);
+  //   }
+  //   useEffect(() => {
+  //     const autoSlide = setInterval(() => {
+  //       setDirection(1);
+  //       if (index === images.length - 1) {
+  //         setIndex(0);
+  //         return;
+  //       }
+  //       setIndex(index + 1);
+  //     }, 3000);
+  //     return () => clearInterval(autoSlide);
+  //   }, [index, direction]);
   return (
     <div className="container my-2">
       <div className="slideshow">
-        <AnimatePresence initial={false} custom={direction}>
-          <motion.img
-            variants={variants}
-            animate="animate"
-            initial="initial"
-            exit="exit"
-            src={images[index]}
-            alt="slides"
-            className="slides"
-            key={images[index]}
-            custom={direction}
-          />
-        </AnimatePresence>
+        <Swiper
+          slidesPerView={1}
+          spaceBetween={5}
+          loop={true}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={true}
+          modules={[Pagination, Navigation, Autoplay]}
+          className="mySwiper"
+        >
+          {images.map((image) => {
+            return (
+              <SwiperSlide>
+                <img src={image} className="object-cover w-full h-full" />
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+        {/* framer motion slider */}
+        {/* <AnimatePresence initial={false} custom={direction}>
+            <motion.img
+              variants={variants}
+              animate="animate"
+              initial="initial"
+              exit="exit"
+              src={images[index]}
+              alt="slides"
+              className="slides"
+              key={images[index]}
+              custom={direction}
+            />
+          </AnimatePresence> */}
         {/* <button className="prevButton" onClick={prevStep}>
           ◀
         </button>
         <button className="nextButton" onClick={nextStep}>
           ▶
         </button> */}
+        {/* framer motion slider end */}
       </div>
     </div>
   );
@@ -230,7 +261,7 @@ export default function Home({ setIsOpenOrderList }: any) {
   useEffect(() => {
     let slider = setInterval(() => {
       setIndex(index + 1);
-    }, 10000);
+    }, 5000);
     return () => {
       clearInterval(slider);
     };
@@ -243,7 +274,7 @@ export default function Home({ setIsOpenOrderList }: any) {
     >
       <div>
         <motion.h1
-          className="text-3xl text-opacity-95 relative font-bold text-center mt-6 sm:mb-3"
+          className="text-3xl mb-1 lg:text-6xl text-opacity-95 relative font-bold text-center mt-6 sm:mb-6"
           initial={{ y: 40, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.7 }}

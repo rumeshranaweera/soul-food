@@ -22,9 +22,9 @@ export default function App({ Component, pageProps }: AppProps) {
 
           <link rel="icon" href="/favicon.png" />
         </Head>
-        <div className="fixed -z-50 left-0 top-3 w-72 h-72 bg-backGroundDark  opacity-20 rounded-full mix-blend-multiply filter blur-3xl animate-blob animate-delay-2s"></div>
-        <div className="fixed -z-50 bottom-7 left-10 w-72 h-72 bg-lime-200 rounded-full mix-blend-multiply filter blur-3xl animate-blob animate-delay-4s"></div>
-        <div className="fixed -z-50 right-0 top-28 w-72 h-72 bg-primaryColor opacity-70 rounded-full mix-blend-multiply filter blur-3xl animate-blob animate-delay-8s"></div>
+        <div className="fixed -z-50 left-0 top-3 w-72 h-72 dark:hidden bg-backGroundDark  opacity-20 rounded-full mix-blend-multiply filter blur-3xl animate-blob animate-delay-2s"></div>
+        <div className="fixed -z-50 bottom-7 left-10 w-72 h-72 dark:hidden bg-lime-200 rounded-full mix-blend-multiply filter blur-3xl animate-blob animate-delay-4s"></div>
+        <div className="fixed -z-50 right-0 top-28 w-72 h-72 dark:hidden bg-primaryColor opacity-70 rounded-full mix-blend-multiply filter blur-3xl animate-blob animate-delay-8s"></div>
         <Navbar setIsOpenOrderList={setIsOpenOrderList}></Navbar>
         <Component
           {...pageProps}

@@ -120,12 +120,12 @@ function menu({ setIsOpenOrderList }: any) {
       </Head>
       <div
         className="
-        flex justify-center"
+        flex justify-center w-5/6 mx-auto max-w-5xl"
         onClick={() => setIsOpenOrderList(false)}
       >
         <div
-          className="flex flex-col justify-start w-5/6
-           mx-auto max-w-5xl lg:min-w-[1024px]"
+          className="flex flex-col justify-start 
+           "
         >
           <h1 className="text-5xl font-bold my-6">Menu</h1>
           <Categories categories={categories} filterItems={filterItems} />
