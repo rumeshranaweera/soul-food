@@ -16,7 +16,7 @@ function about({ setIsOpenOrderList }: any) {
       >
         <div
           className="flex flex-col justify-start w-5/6
-        right-0 left-0 mx-auto max-w-3xl md:min-w-[1024px] dark:shadow-none"
+        right-0 left-0 mx-auto max-w-3xl dark:shadow-none"
         >
           <h1 className="text-5xl font-bold my-6">About</h1>
           <motion.article
@@ -139,6 +139,7 @@ function about({ setIsOpenOrderList }: any) {
           className="w-full rounded-md block"
           height="450"
           style={{ border: "0" }}
+          title="soulfood location"
           loading="lazy"
         ></iframe>
       </div>

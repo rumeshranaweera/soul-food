@@ -66,57 +66,6 @@ const reviews = [
   },
 ];
 
-const Images = () => {
-  return (
-    <div>
-      <div className="img-3d absolute top-28 right-3 md:top-28 md:right-28 w-36">
-        <Image
-          src={
-            "https://media-cdn.tripadvisor.com/media/photo-o/1b/15/0e/d5/photo0jpg.jpg"
-          }
-          width="300"
-          height="500"
-          alt={""}
-          className="img-right relative "
-        />
-      </div>
-      <div className="img-3d absolute top-56 right-10 md:top-28 md:right-28 w-36">
-        <Image
-          src={
-            "https://media-cdn.tripadvisor.com/media/photo-o/1a/9b/11/ee/photo0jpg.jpg"
-          }
-          width="300"
-          height="500"
-          alt={""}
-          className="img-right relative "
-        />
-      </div>
-      <div className="img-3d absolute top-28 left-3 md:top-28 md:right-28 w-36">
-        <Image
-          src={
-            "https://media-cdn.tripadvisor.com/media/photo-m/1280/22/12/9c/bc/caption.jpg"
-          }
-          width="300"
-          height="500"
-          alt={""}
-          className="img-left relative "
-        />
-      </div>
-      <div className="img-3d absolute top-56 left-10 md:top-28 md:right-28 w-36">
-        <Image
-          src={
-            "https://media-cdn.tripadvisor.com/media/photo-m/1280/28/0f/19/2c/soul-food.jpg"
-          }
-          width="300"
-          height="500"
-          alt={""}
-          className="img-left relative "
-        />
-      </div>
-    </div>
-  );
-};
-
 const images = [
   "https://media-cdn.tripadvisor.com/media/photo-m/1280/22/12/9c/bc/caption.jpg",
   "https://media-cdn.tripadvisor.com/media/photo-m/1280/1a/9b/11/ef/photo1jpg.jpg",
@@ -160,37 +109,6 @@ const variants = {
 };
 
 function ImageSlider() {
-  const [index, setIndex] = useState(0);
-  const [direction, setDirection] = useState(0);
-
-  //   function nextStep() {
-  //     setDirection(1);
-  //     if (index === images.length - 1) {
-  //       setIndex(0);
-  //       return;
-  //     }
-  //     setIndex(index + 1);
-  //   }
-  //
-  //   function prevStep() {
-  //     setDirection(-1);
-  //     if (index === 0) {
-  //       setIndex(images.length - 1);
-  //       return;
-  //     }
-  //     setIndex(index - 1);
-  //   }
-  //   useEffect(() => {
-  //     const autoSlide = setInterval(() => {
-  //       setDirection(1);
-  //       if (index === images.length - 1) {
-  //         setIndex(0);
-  //         return;
-  //       }
-  //       setIndex(index + 1);
-  //     }, 3000);
-  //     return () => clearInterval(autoSlide);
-  //   }, [index, direction]);
   return (
     <div className="container my-2">
       <div className="slideshow">
@@ -217,27 +135,6 @@ function ImageSlider() {
             );
           })}
         </Swiper>
-        {/* framer motion slider */}
-        {/* <AnimatePresence initial={false} custom={direction}>
-            <motion.img
-              variants={variants}
-              animate="animate"
-              initial="initial"
-              exit="exit"
-              src={images[index]}
-              alt="slides"
-              className="slides"
-              key={images[index]}
-              custom={direction}
-            />
-          </AnimatePresence> */}
-        {/* <button className="prevButton" onClick={prevStep}>
-          ◀
-        </button>
-        <button className="nextButton" onClick={nextStep}>
-          ▶
-        </button> */}
-        {/* framer motion slider end */}
       </div>
     </div>
   );
@@ -372,6 +269,7 @@ export default function Home({ setIsOpenOrderList }: any) {
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.5446972930604!2d80.63386371477506!3d7.292528194736579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae36721cdbf3209%3A0x1575ab994a62ba51!2sSoul%20Food!5e0!3m2!1sen!2snl!4v1679292755872!5m2!1sen!2snl"
         className="w-full rounded-md"
         height="450"
+        title="soulfood location"
         style={{ border: "0" }}
         loading="lazy"
       ></iframe>
