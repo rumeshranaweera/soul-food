@@ -13,7 +13,7 @@ function Navbar({ setIsOpenOrderList }: any) {
   return (
     <nav
       onClick={() => setIsOpenOrderList(false)}
-      className={` z-50 fixed flex flex-col justify-center items-center bg-primaryColor dark:bg-backGroundDark dark:bg-opacity-80  bg-opacity-80 rounded-b-lg w-5/6 duration-500 drop-shadow-lg backdrop-blur-sm
+      className={` z-50 fixed flex flex-col justify-center items-center bg-primaryColor dark:bg-backGroundDark dark:bg-opacity-80  bg-opacity-80 rounded-b-lg w-5/6 duration-500 drop-shadow-lg backdrop-blur-sm border-2 border-primaryColor/5 border-t-0
     right-0 left-0 mx-auto  ${initialPosition} ${
         fullNav ? "translate-y-36" : ""
       }`}

@@ -76,38 +76,6 @@ const images = [
   "https://media-cdn.tripadvisor.com/media/photo-m/1280/22/06/b1/5c/caption.jpg",
 ];
 
-const variants = {
-  initial: (direction: any) => {
-    return {
-      x: direction > 0 ? 1000 : -1000,
-      opacity: 0,
-      // scale: 0.5,
-    };
-  },
-  animate: {
-    x: 0,
-    opacity: 1,
-    // scale: 1,
-    // transition: 'ease-in',
-    transition: {
-      x: { type: "spring", stiffness: 300, damping: 30 },
-      opacity: { duration: 0.2 },
-    },
-  },
-  exit: (direction: any) => {
-    return {
-      x: direction > 0 ? -1000 : 1000,
-      opacity: 0,
-      // scale: 0.5,
-      // transition: 'ease-in',
-      transition: {
-        x: { type: "spring", stiffness: 300, damping: 30 },
-        opacity: { duration: 0.2 },
-      },
-    };
-  },
-};
-
 function ImageSlider() {
   return (
     <motion.div
