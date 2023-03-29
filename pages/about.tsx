@@ -7,7 +7,7 @@ function about({ setIsOpenOrderList }: any) {
   return (
     <>
       <Head>
-        <title>About</title>
+        <title>About | Soul Food</title>
       </Head>
       <div
         className="

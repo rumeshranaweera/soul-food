@@ -110,7 +110,12 @@ const variants = {
 
 function ImageSlider() {
   return (
-    <div className="container my-2">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      className="container my-2"
+    >
       <div className="slideshow">
         <Swiper
           slidesPerView={1}
@@ -130,13 +135,20 @@ function ImageSlider() {
           {images.map((image) => {
             return (
               <SwiperSlide>
-                <img src={image} className="object-cover w-full h-full" />
+                <Image
+                  src={image}
+                  width={800}
+                  height={800}
+                  priority
+                  alt="soulfood"
+                  className="object-cover w-full h-auto"
+                />
               </SwiperSlide>
             );
           })}
         </Swiper>
       </div>
-    </div>
+    </motion.div>
   );
 }
 export default function Home({ setIsOpenOrderList }: any) {

@@ -25,8 +25,7 @@ function MenuCard({ item }: any): any {
       <div className="relative">
         <motion.article
           layout
-          initial={{ y: 40, opacity: 0 }}
-          // animate={{ scaleX: openCard ? -1 : 1 }}
+          initial={{ y: 10, opacity: 0.2 }}
           whileInView={{
             y: 0,
             opacity: 1,
