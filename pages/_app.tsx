@@ -6,13 +6,30 @@ import Footer from "../components/Footer";
 import Appcontext from "./context";
 
 import OrderdList from "../components/OrderdList";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function App({ Component, pageProps }: AppProps) {
   const [isOpenOrderList, setIsOpenOrderList] = useState<Boolean>(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  const preventScrolling = (e: Event) => {
+    e.preventDefault();
+    e.stopPropagation();
+  };
+
+  useEffect(() => {
+    const currentContainer = containerRef.current;
+    if (currentContainer) {
+      if (isOpenOrderList) {
+        currentContainer.addEventListener("wheel", preventScrolling);
+      }
+      return () =>
+        currentContainer.removeEventListener("wheel", preventScrolling);
+    }
+  }, [isOpenOrderList]);
   return (
     <Appcontext>
-      <>
+      <div ref={containerRef}>
         <Head>
           <title>Soul Food</title>
           <meta
@@ -36,14 +53,14 @@ export default function App({ Component, pageProps }: AppProps) {
           setIsOpenOrderList={setIsOpenOrderList}
         />
         <div
-          className="bg-backGroundDark bg-opacity-80 dark:bg-primaryColor p-1 text-2xl rounded-md fixed z-30 bottom-3 right-3 cursor-pointer"
+          className="bg-backGroundDark bg-opacity-80 dark:bg-primaryColor p-1 text-3xl rounded-md fixed z-30 bottom-3 right-3 cursor-pointer"
           onClick={() => setIsOpenOrderList(!isOpenOrderList)}
         >
           🍜
         </div>
 
         <Footer />
-      </>
+      </div>
     </Appcontext>
   );
 }

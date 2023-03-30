@@ -152,7 +152,7 @@ export default function Home({ setIsOpenOrderList }: any) {
       <div>
         <motion.h1
           className="text-3xl mb-1 lg:text-6xl text-opacity-95 relative font-bold text-center mt-6 sm:mb-6"
-          initial={{ y: 40, opacity: 0 }}
+          initial={{ y: 10, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.7 }}
         >
